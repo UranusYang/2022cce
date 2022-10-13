@@ -66,7 +66,22 @@ int main()
 }
 ```
 
-## Week02-3 
+## Week02-3 int(integer) 和 %d 用法 
+1. 利用 int 宣告未知數，讓電腦知道
+2. 把一個數代入，印出來
+```cpp
+/// 學習 int 整數 integer
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    a = 2;
+    printf("現在的a是%d\n", a);
+    a = 99;
+    printf("現在的a是%d\n", a);
+}
+```
 
 ## Week02-4
 
