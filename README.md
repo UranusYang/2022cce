@@ -134,7 +134,10 @@ int main()
 ```
 
 ## Week06-2 for迴圈 畫等腰三角形
-1. 先印出空格
+1. 先印出空格，空格是從空四格開始減少
+2. 再印出星星，星星的數量是奇數1、3、5、7、9
+3. 利用for迴圈
+4. 口訣：左手i 當鷹架, 右手j 一直做
 ```cpp
 #include <stdio.h>
 int main()
@@ -149,6 +152,45 @@ int main()
 }
 ```
 
-## Week06-3
+## Week06-3 for迴圈 小學的約分
+1. 分數想要約分51 68，試全部的數字，看能不能整除
+2. 使用 1個for迴圈
+3. 這個數 i 如果可以兩個都整除，那就找到答案了
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入兩個整數,要約分: ");
+    int a, b;
+    scanf("%d %d", &a, &b);
 
-## Week06-4
+    int ans;
+    for(int i=1; i<=a; i++){
+        if( a%i==0 && b%i==0 )
+            ans=i;
+    }
+    printf("ans: %d 可約分", ans);
+}
+```
+
+## Week06-4 while 輾轉相除法
+1. 口訣老大a、老二b、老三c=a%b，如果是0，則老二b是答案。
+2. 老二變老大、老三變老二，繼續做，就成功了。
+3. 利用while一直做
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    scanf("%d %d", &a, &b);
+    while(1)
+    {
+        c = a%b;
+        printf("老大:%d 老二:%d 老三:%d\n", a, b, c);
+        if( c==0 ) break;
+        a=b;
+        b=c;
+    }
+    printf("答案b: %d ", b);
+}
+```
