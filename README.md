@@ -93,8 +93,6 @@ int main()
 
 ## Week03-4
 
-## Week03-4
-
 ## Week03-5
 
 ## Week04-1
@@ -117,9 +115,39 @@ int main()
 
 ## Week05-5
 
-## Week06-1
+## Week06-1 for迴圈 畫星星
+1. 用星星畫倒過來的三角形
+2. 利用「左手i、右手j」的口訣, 來思考迴圈執行的樣子
+3.  先把 i:5 i:4 i:3 i:2 i:1 印出來，使用倒過來的迴圈
+4.  裡面的 j迴圈, 則是用基礎型
+```cpp
+#include <stdio.h>
+int main()
+{
+    for(int i=5; i>0; i--){///倒過來型
+        for(int j=0; j<i; j++){///基礎型
+            printf("*");
+        }
+    printf("i:%d星星\n", i);
+    }
+}
+```
 
-## Week06-2
+## Week06-2 for迴圈 畫等腰三角形
+1. 先印出空格
+```cpp
+#include <stdio.h>
+int main()
+{
+    for(int i=1; i<=5; i++)
+    {
+        int space=5-i , star=2*i-1;
+        for(int k=0; k<space; k++) printf(" ");
+        for(int k=0; k<star; k++) printf("*");
+        printf("\n");
+    }
+}
+```
 
 ## Week06-3
 
