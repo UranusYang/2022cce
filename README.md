@@ -83,37 +83,263 @@ int main()
 }
 ```
 
-## Week02-4
+## Week02-4 scanf 和 %d 用法 兩數相加
+1. 利用scanf讀入數值
+2. & 表示我們要把讀到的數值放到 a 及 b 對應的 address 裡面去
+3. 再用 %d 表示要讀入的整數代號
+```cpp
+#include <stdio.h>
 
-## Week03-1
+int main()
+{
+    int a, b;
+    printf("請用鍵盤輸入2個整數：");
+    scanf("%d", &a );
+    scanf("%d", &b );
+    printf("你讀入了 %d %d \n", a , b );
+    printf("它們加起來是：%d\n", a+b);
+}
+```
 
-## Week03-2
+## Week03-1 + - * / % 運算
+1. 課本的第二章有運算符號
+2. % 的用法可代表取除法的餘數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    printf("請輸入兩個數字： ");
+    scanf("%d%d" , &a, &b);
 
-## Week03-3
+    printf("%d + %d 是 %d\n", a, b, a+b);
+    printf("%d - %d 是 %d\n", a, b, a-b);
+    printf("%d * %d 是 %d\n", a, b, a*b);
+    printf("%d / %d 是 %d\n", a, b, a/b);
+    printf("%d 除以 %d 是 %d 餘 %d\n", a, b, a%b);
+}
+```
+
+## Week03-2 % 餘數用法
+1. 某正整數，用8除餘6，用9除餘7，用15除餘13，該數最小值為多少？
+2. 答案是358
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入數字n： ");
+
+    int n;
+    scanf("%d", &n);
+    printf("用8除餘%d\n",n%8);
+    printf("用9除餘%d\n",n%9);
+    printf("用15除餘%d\n",n%15);
+}
+```
+
+## Week03-3 
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("½Ð¿é¤J¼Æ¦rn¡G ");
+
+    int n;
+    scanf("%d", &n);
+    if( n>10 ) printf("n>10");
+    if( n<10 ) printf("n<10");
+    if( n==10 ) printf("n==10");
+}
+```
 
 ## Week03-4
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    if(n%2==0) printf("even");
+    else printf("odd");
+}
+```
 
 ## Week03-5
+```cpp
+#include <stdio.h>
+int main()
+{
+    for(int n=1; n<2000; n++){
+        if(n%8==6 && n%9==7 && n%15==13){
+            printf("\n現在n： %d\n", n );
+            printf("用8除餘%d\n",n%8);
+            printf("用9除餘%d\n",n%9);
+            printf("用15除餘%d\n",n%15);
+        }
+    }
+}
+```
 
 ## Week04-1
+1. 閏年、奧運4年一次
+2. 口訣：4 100 400 倒過來想
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入西元年分：");
 
-## Week04-2
+    int n;
+    scanf("%d", &n);
+
+    if( n%400==0 ) printf("閏年");
+    else if( n%100==0 ) printf("普通年/平年");
+    else if( n%4==0 ) printf("閏年");
+    else printf("普通年/平年");
+}
+```
+
+## Week04-2 排版
+1. CodeBlocks 右鍵, Format AStly
+2. Setting-Editor,左邊第7個 Source Formatter
+```cpp
+#include <stdio.h>
+int main()
+{
+    for(int n=1; n<2000; n++)
+    {
+        if(n%8==6 && n%9==7 && n%15==13)
+        {
+            printf("\n現在n： %d\n", n );
+            printf("用8除餘%d\n",n%8);
+            printf("用9除餘%d\n",n%9);
+            printf("用15除餘%d\n",n%15);
+        }
+    }
+}
+```
 
 ## Week04-3
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d", &n);
 
-## Week04-4
+	if(n%400==0) printf("Yes");
+	else if(n%100==0)printf("No");
+	else if(n%4==0)printf("Yes");
+	else printf("No");
+}
+```
 
-## Week04-5
+## Week04-4 for迴圈
+```cpp
+#include <stdio.h>
+int main()
+{
+    for( int i=0; i<4; i++){
+        printf("¥X²{ i¡G%d \n", i);
+    } ///·|¦L¥X i:0 ... i:3 ¦@4¦¸
+}
+```
+
+## Week04-5 for 迴圈 看次數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int N=5;
+    for( int i=0; i<N; i++){
+        printf("出現 i:%d \n", i);
+    }
+    ///程式的重點,是N是多少,就幾次
+    for(int i=1; i<=N; i++){
+        printf("接下來 i:%d \n", i);
+    }
+}
+```
 
 ## Week05-1
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=2;
+    ///本來是if(判斷)  印一次
+
+    ///改成while(迴圈)
+    while(n==2) printf("n是2\n");
+    ///不會停
+}
+```
 
 ## Week05-2
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=10;
+
+    while(n>0){
+        printf("n¬O%d, n>0\n", n);
+
+        n--;///½Ò¥»²Ä2³¹,¹Bºâ
+    }
+}
+```
 
 ## Week05-3
+```cpp
+#include <stdio.h>
+int main()
+{
+    ///int n=10;
+    ///while(n>0){
+    ///    printf("n¬O%d, n>0\n", n);
+    ///    n--;///½Ò¥»²Ä2³¹,¹Bºâ
+    ///}
+    for( int n=10; n>0; n-- ){
+        printf("n¬O%d, n>0\n", n);
+    }
+}
+```
 
 ## Week05-4
+1. 了解for迴圈的各種用法
+2. 
+```cpp
+#include <stdio.h>
+int main()
+{
+    for( int i=0; i<3; i++ ){ ///0 1 2
+        printf("迴圈(電腦習慣) i是%d, i>0\n", i);
+    }
+    for( int i=1; i<=3; i++ ){ ///1 2 3
+        printf("迴圈(人類熟悉) i是%d, i>0\n", i);
+    }
+    for( int i=3; i>0; i-- ){ ///3 2 1
+        printf("倒過來的迴圈 i是%d, i>0\n", i);
+    }
+}
+```
 
 ## Week05-5
+```cpp
+#include <stdio.h>
+int main()
+{
+    for( int i=1; i<10; i++){///10¦¸: 0...9
+        for(int j=1; j<10; j++){
+            printf("%d*%d=%2d ", i, j, i*j);
+        }
+        printf("\n");
+    }
+
+}
+```
 
 ## Week06-1 for迴圈 畫星星
 1. 用星星畫倒過來的三角形
