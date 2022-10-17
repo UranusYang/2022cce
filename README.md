@@ -101,6 +101,7 @@ int main()
 }
 ```
 
+# Week03
 ## Week03-1 + - * / % 運算
 1. 課本的第二章有運算符號
 2. % 的用法可代表取除法的餘數
@@ -123,6 +124,7 @@ int main()
 ## Week03-2 % 餘數用法
 1. 某正整數，用8除餘6，用9除餘7，用15除餘13，該數最小值為多少？
 2. 答案是358
+3. 使用 % 餘數的符號做運算
 ```cpp
 #include <stdio.h>
 int main()
@@ -137,12 +139,14 @@ int main()
 }
 ```
 
-## Week03-3 
+## Week03-3 if 用法 比大小
+1. 使用if判斷某整數和10的大小
+2. 運用 %d 整數符號帶入數值
 ```cpp
 #include <stdio.h>
 int main()
 {
-    printf("½Ð¿é¤J¼Æ¦rn¡G ");
+    printf("請輸入數字n: ");
 
     int n;
     scanf("%d", &n);
@@ -152,7 +156,9 @@ int main()
 }
 ```
 
-## Week03-4
+## Week03-4 if 和 else 的用法 奇偶數判斷
+1. 利用 if(判斷) 配合 else 來做事，是課本第三章的第一個程式範例
+2. 利用 % 餘數符號運算結果作判斷依據
 ```cpp
 #include <stdio.h>
 int main()
@@ -165,7 +171,11 @@ int main()
 }
 ```
 
-## Week03-5
+## Week03-5 if 和 for迴圈的搭配用法 找到數字n
+1. 用8除餘6，用9除餘7，用15除餘13，找到數字n
+2. 用課本第三章的第二個主題 for迴圈
+3. 搭配 if 判斷找出答案
+4. 使用 % 餘數符號和 &&而且 兩種符號
 ```cpp
 #include <stdio.h>
 int main()
@@ -181,9 +191,12 @@ int main()
 }
 ```
 
-## Week04-1
+# Week04
+## Week04-1 if 和 else的用法 判斷閏年
 1. 閏年、奧運4年一次
 2. 口訣：4 100 400 倒過來想
+3. 從範圍最小的開始找
+4. 利用 if 和 else 做判斷
 ```cpp
 #include <stdio.h>
 int main()
@@ -201,8 +214,9 @@ int main()
 ```
 
 ## Week04-2 排版
-1. CodeBlocks 右鍵, Format AStly
-2. Setting-Editor,左邊第7個 Source Formatter
+1. 有預設的 Allmen (ANSI), K&R, Stroustrup 等方法
+2. CodeBlocks 右鍵，Format AStly 可自動排版
+3. 可在Setting-Editor，左邊第7個 Source Formatter調整看看
 ```cpp
 #include <stdio.h>
 int main()
@@ -220,7 +234,11 @@ int main()
 }
 ```
 
-## Week04-3
+## Week04-3 if 和 else的用法 判斷閏年
+1. 閏年、奧運4年一次
+2. 口訣：4 100 400 倒過來想
+3. 從範圍最小的開始找
+4. 利用 if 和 else 做判斷
 ```cpp
 #include <stdio.h>
 int main()
@@ -236,17 +254,23 @@ int main()
 ```
 
 ## Week04-4 for迴圈
+1. 把 int i 放在 for()的裡面, 再來是把 i從0開始
+2. 會印出 i:0 ... i:3 共4次
 ```cpp
 #include <stdio.h>
 int main()
 {
     for( int i=0; i<4; i++){
-        printf("¥X²{ i¡G%d \n", i);
-    } ///·|¦L¥X i:0 ... i:3 ¦@4¦¸
+        printf("出現 i：%d \n", i);
+    } ///會印出 i:0 ... i:3 共4次
 }
 ```
 
 ## Week04-5 for 迴圈 看次數
+1. 熟悉「迴圈到底會跑幾次」
+2. 一種是電腦的想法，從0開始
+3. 二是人類的想法，從1開始
+4. 都是執行中間那個數次的次數，是N是多少，就幾次
 ```cpp
 #include <stdio.h>
 int main()
@@ -262,7 +286,11 @@ int main()
 }
 ```
 
-## Week05-1
+# Week05
+## Week05-1 if 和 while迴圈的差別 flow chart 流程圖
+1. 把 if 改成 while 看它的差別
+2. if 只會印一次
+3. while 不會停
 ```cpp
 #include <stdio.h>
 int main()
@@ -276,7 +304,9 @@ int main()
 }
 ```
 
-## Week05-2
+## Week05-2 while迴圈 flow chart 流程圖
+1. 有了判斷的標準，while 迴圈會停
+2. 課本第三章，運算
 ```cpp
 #include <stdio.h>
 int main()
@@ -284,32 +314,34 @@ int main()
     int n=10;
 
     while(n>0){
-        printf("n¬O%d, n>0\n", n);
+        printf("n是%d, n>0\n", n);
 
-        n--;///½Ò¥»²Ä2³¹,¹Bºâ
+        n--;///課本第三章,運算
     }
 }
 ```
 
-## Week05-3
+## Week05-3 for和 while迴圈的差別
+1. 把 while 改成 for
+2. 課本第-4章，運算
 ```cpp
 #include <stdio.h>
 int main()
 {
     ///int n=10;
     ///while(n>0){
-    ///    printf("n¬O%d, n>0\n", n);
-    ///    n--;///½Ò¥»²Ä2³¹,¹Bºâ
+    ///    printf("n是%d, n>0\n", n);
+    ///    n--;///課本第2章,運算
     ///}
     for( int n=10; n>0; n-- ){
-        printf("n¬O%d, n>0\n", n);
+        printf("n是%d, n>0\n", n);
     }
 }
 ```
 
-## Week05-4
+## Week05-4 for迴圈
 1. 了解for迴圈的各種用法
-2. 
+2. 電腦習慣、人類熟悉、倒過來的迴圈
 ```cpp
 #include <stdio.h>
 int main()
@@ -326,12 +358,15 @@ int main()
 }
 ```
 
-## Week05-5
+## Week05-5 for迴圈 九九乘法表
+1. 利用 for 迴圈運算
+2. 口訣：左手i，右手j
+3. %2d 中間的二代表有兩格
 ```cpp
 #include <stdio.h>
 int main()
 {
-    for( int i=1; i<10; i++){///10¦¸: 0...9
+    for( int i=1; i<10; i++){///10次: 0...9
         for(int j=1; j<10; j++){
             printf("%d*%d=%2d ", i, j, i*j);
         }
@@ -341,6 +376,7 @@ int main()
 }
 ```
 
+# Week06
 ## Week06-1 for迴圈 畫星星
 1. 用星星畫倒過來的三角形
 2. 利用「左手i、右手j」的口訣, 來思考迴圈執行的樣子
