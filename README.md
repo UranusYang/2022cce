@@ -457,8 +457,8 @@ int main()
 }
 ```
 
-#Week07
-##Week07-1 long long int 很長很長的整數
+# Week07
+## Week07-1 long long int 很長很長的整數
 1. 在x86的電腦架構下 int 是32位元，可裝9-10位數 首位最大到2
 2. long long int 可裝19-20位數
 3. lld 是英文的 long long d
