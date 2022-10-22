@@ -473,3 +473,86 @@ int main()
     printf("long long int 印出來 %lld\n", a);
 }
 ```
+
+## Week07-2 long long int 複習最大公因數
+1. 最大公因數，改用 long ling int
+2. scanf("%lld", &a); 讀入
+3. printf("%lld", &b); 印出
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+
+    long long int ans;
+    for(long long int i=1; i<=a; i++){
+        if(a%i==0 && b%i==0) ans=i;
+    }
+    printf("大公因數是:%d\n", ans);
+}
+```
+
+## Week07-3 long long int 輾轉相除法
+1. 改用輾轉相除法，找最大公因數
+2. 要用 long long int 版本，數字很大
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b, c;
+    scanf("%lld %lld", &a, &b);
+    while(1){
+        c = a%b;
+        printf("a:%lld b:%lld c:%lld\n", a, b, c);
+        if(c==0) break;
+        a = b;
+        b = c;
+    }
+    printf("答案是: %lld\n", b);
+}
+```
+
+## Week07-4 long long int 
+1. 從個位數來剝，把 123456789 分別剝出 9 8 ... 1
+2. 用 %10 取餘數，便可以得到值
+3. 十進位轉2進位(剝皮法)，倒過來想
+```cpp
+#include <stdio.h>
+int main()
+{
+    ///請輸入9位數
+    int n;
+    scanf("%d", &n);
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+
+    printf("現在的個位數:%d\n", n%10);
+    n = n/10;
+}
+```
