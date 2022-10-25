@@ -1,6 +1,6 @@
-///³Ì¤j¤½¦]¼Æ¡A§ï¥Î long ling int
-/// scanf("%lld", &a); Åª¤J
-///printf("%lld", &b); ¦L¥X
+///æœ€å¤§å…¬å› æ•¸ï¼Œæ”¹ç”¨ long ling int
+/// scanf("%lld", &a); è®€å…¥
+///printf("%lld", &b); å°å‡º
 
 #include <stdio.h>
 int main()
@@ -12,5 +12,5 @@ int main()
     for(long long int i=1; i<=a; i++){
         if(a%i==0 && b%i==0) ans=i;
     }
-    printf("¤j¤½¦]¼Æ¬O:%d\n", ans);
+    printf("å¤§å…¬å› æ•¸æ˜¯:%d\n", ans);
 }
