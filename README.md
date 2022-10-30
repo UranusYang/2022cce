@@ -558,7 +558,9 @@ int main()
 ```
 
 # Week08
-## Week08-1
+## Week08-1 for迴圈 質數
+1. 判斷1個質數
+2. 試2...n-1的數(因為1和n本身,一定會整除)
 ```cpp
 #include <stdio.h>
 int main()
@@ -575,7 +577,9 @@ int main()
 }
 ```
 
-## Week08-2
+## Week08-2 for迴圈 質數
+1. 判斷1個質數
+2. 試2...n-1的數(因為1和n本身,一定會整除)
 ```cpp
 #include <stdio.h>
 int main()
@@ -595,7 +599,10 @@ int main()
 }
 ```
 
-## Week08-3
+## Week08-3 把一些數字加起來
+1. 迴圈前面 int sum=0
+2. 迴圈中間修改 sum += n
+3. 迴圈後面 把 sum 印出來
 ```cpp
 ///請把一些數字加起來
 #include <stdio.h>
@@ -613,7 +620,11 @@ int main()
 }
 ```
 
-## Week08-4
+## Week08-4 直角三角形
+1. 善用迴圈建立鷹架(樓層i)
+2. 再把星星搞定
+3. 再把空格搞定
+4.再拆掉鷹架
 ```cpp
 #include <stdio.h>
 int main()
@@ -632,7 +643,10 @@ int main()
 }
 ```
 
-## Week08-5
+## Week08-5 for迴圈 右方直角三角形
+1. 只用2個for迴圈來寫出「有時候印空格、有時候印星星」的直角三角形
+2. 口訣是，正方形，先能用星星印出正方形，表示迴圈做好了
+3. 接下來if(判斷)來決定什麼時候改印空格，就要再導一下，第i樓有n-i個空格，所以 if(k=n-i)時，都印空格
 ```cpp
 #include <stdio.h>
 int main()
@@ -650,7 +664,10 @@ int main()
 }
 ```
 
-## Week08-6
+## Week08-6 while 右方直角三角形
+1. 只用2個while迴圈
+2. 有正方形, 配合 if(判斷)來決定誰印空格、誰印星星後,
+3. 再把前一個程式, 逐一把 for迴圈的前面初始變數、中間判斷
 ```cpp
 #include <stdio.h>
 int main()
